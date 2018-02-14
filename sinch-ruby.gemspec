@@ -9,11 +9,11 @@ Gem::Specification.new do |s|
   s.files       = ['lib/sinch.rb']
   s.homepage    = 'http://rubygems.org/gems/sinch'
   s.license     = 'MIT'
-  s.add_development_dependency 'rspec'
-  s.add_development_dependency 'activesupport'
-  s.add_development_dependency 'vcr'
-  s.add_development_dependency 'webmock'
-  s.add_development_dependency 'simplecov'
-  s.add_development_dependency 'rubocop'
-  s.add_runtime_dependency 'httparty'
+  s.add_development_dependency 'rspec', '~> 3.2'
+  s.add_development_dependency 'activesupport', '~> 5.1'
+  s.add_development_dependency 'vcr', '~> 4.0'
+  s.add_development_dependency 'webmock', '~> 3.3'
+  s.add_development_dependency 'simplecov', '~> 0.14.0'
+  s.add_development_dependency 'rubocop', '~> 0.49.0'
+  s.add_runtime_dependency 'httparty', '~> 0.15.6'
 end
