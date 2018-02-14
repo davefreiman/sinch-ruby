@@ -1,4 +1,6 @@
 # Sinch Ruby REST API Wrapper #
+[![Build Status](https://travis-ci.org/davefreiman/sinch-rails.svg?branch=master)](https://travis-ci.org/davefreiman/sinch-rails)
+[![Gem Version](https://badge.fury.io/rb/sinch-ruby.svg)](https://badge.fury.io/rb/sinch-ruby)
 
 ## About ## 
 
