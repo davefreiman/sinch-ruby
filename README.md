@@ -12,7 +12,7 @@ Currently the only implementation covers the [Verification API](https://www.sinc
 
 This gem is designed to work with rails. To install it, add the following to your Gemfile
 
-    gem 'sinch-ruby', '~> 0.1.0'
+    gem 'sinch-ruby', '0.1.2'
     
 To install it via `gem install`:
 
@@ -75,7 +75,7 @@ Please fork this repository and submit a pull request to the `develop` branch on
 Tests are run with the rspec framework.
 
      # Clone the repository
-     git clone [reponame]
+     git clone git@github.com:davefreiman/sinch-rails.git
      
      # install dependencies
      bundle install
