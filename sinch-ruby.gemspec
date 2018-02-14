@@ -6,8 +6,8 @@ Gem::Specification.new do |s|
   s.description = 'A library for communicating with the Sinch Rest API'
   s.authors     = ['David Freiman']
   s.email       = 'dfreiman@feedbackapp.ca'
-  s.files       = ['lib/sinch.rb']
-  s.homepage    = 'http://rubygems.org/gems/sinch'
+  s.files       = Dir['lib/**/*.rb']
+  s.homepage    = 'http://rubygems.org/gems/sinch-ruby'
   s.license     = 'MIT'
   s.add_development_dependency 'rspec', '~> 3.2'
   s.add_development_dependency 'activesupport', '~> 5.1'
