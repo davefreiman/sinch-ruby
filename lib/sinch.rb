@@ -18,3 +18,4 @@ require 'sinch/response/verification'
 require 'sinch/response/report_verification'
 
 require 'sinch/gateway'
+require 'sinch/bogus_gateway'
