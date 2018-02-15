@@ -14,11 +14,14 @@ Currently the only implementation covers the [Verification API](https://www.sinc
 
 This gem is designed to work with rails. To install it, add the following to your Gemfile
 
-    gem 'sinch-ruby', '0.1.2'
+    gem 'sinch-ruby', '0.1.2', require: 'sinch'
     
 To install it via `gem install`:
 
-    gem install sinch-ruby
+    $ gem install sinch-ruby
+    $ irb
+    > require 'sinch'
+    > # do things with Sinch
     
 In order to make Authenticated requests, you'll need to configure the `application_key`
 from your Sinch account.
