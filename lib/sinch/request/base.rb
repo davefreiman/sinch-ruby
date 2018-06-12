@@ -2,6 +2,8 @@ module Sinch
   module Request
     # Base Sinch Api Request
     class Base
+      include Authorization
+
       attr_reader :params
 
       def initialize(params)
@@ -41,20 +43,8 @@ module Sinch
           'https://verificationapi-v1.sinch.com'
         end
 
-        def authorization
-          "Application #{application_key}"
-        end
-
-        def content_type
-          'application/json'
-        end
-
-        def timestamp
-          Time.now.utc.iso8601
-        end
-
-        def application_key
-          Sinch.config.application_key
+        def public_resource?
+          true
         end
     end
   end

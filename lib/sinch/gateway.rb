@@ -6,8 +6,8 @@ module Sinch
     class << self
       def request(endpoint, params)
         request =
-          "Sinch::Request::#{endpoint.to_s.classify}".constantize.new params
-        response = "Sinch::Response::#{endpoint.to_s.classify}".constantize.new
+          "Sinch::Request::#{endpoint.to_s.camelize}".constantize.new params
+        response = "Sinch::Response::#{endpoint.to_s.camelize}".constantize.new
         new(request, response, params).do_request
       end
     end

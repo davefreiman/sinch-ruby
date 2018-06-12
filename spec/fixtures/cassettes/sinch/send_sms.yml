@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://messagingapi.sinch.com/v1/Sms/+14165553555
+    body:
+      encoding: UTF-8
+      string: '{"from":null,"message":"I have a very specific set of skills"}'
+    headers:
+      Content-Type:
+      - application/json
+      X-Timestamp:
+      - '2018-06-12T19:13:25Z'
+      Authorization:
+      - Application AREDACTEDSIGNATURE
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 12 Jun 2018 19:13:26 GMT
+      Content-Length:
+      - '23'
+    body:
+      encoding: UTF-8
+      string: '{"messageId":166386921}'
+    http_version:
+  recorded_at: Tue, 12 Jun 2018 19:13:26 GMT
+recorded_with: VCR 4.0.0

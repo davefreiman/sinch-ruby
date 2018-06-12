@@ -6,6 +6,7 @@ require 'vcr'
 require 'webmock/rspec'
 require 'simplecov'
 SimpleCov.start
+require 'byebug'
 
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/fixtures/cassettes'
