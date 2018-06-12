@@ -23,7 +23,7 @@ To install it via `gem install`:
     > require 'sinch'
     > # do things with Sinch
     
-In order to make Authenticated requests, you'll need to configure the `application_key`
+In order to make Authenticated requests, you'll need to configure the `application_key` and `secret_key`
 from your Sinch account.
 
 First, create an app in the [Sinch portal](https://portal.sinch.com), and then find your application_key.
@@ -32,13 +32,14 @@ Then, in an initializer, or wherever suits you:
 
     Sinch.configure do |config|
       config.application_key = '[your-application-key]'
+      config.secret_key = '[your-application-secret]'
     end
 
 ## Usage ##
 
 To call the api, call `.request` on the `Gateway` class, providing the resource as your first argument, and any params for the second
 
-Currently the only resources supported are `:verification` and `report_verification`
+Currently the only resources supported are `:verification`, `:report_verification`, and `:send_sms`
 
 ### Verification Example ###
 
@@ -51,6 +52,19 @@ Currently the only resources supported are `:verification` and `report_verificat
     gateway = Sinch::Gateway
     params = { phone_number: '+121255535555', code: '1337' }
     gateway.request(:report_verification, params) 
+
+### SendSms Example ###
+
+To send SMS to any given number through Sinch, you must be approved for a production app and have Full SMS Access enabled.
+If you are using a sandbox app, you can only send SMS messages to the Verified Phone Number associated with the account 
+
+    gateway = Sinch::Gateway
+    
+    # phone_number: The recipient's phone number
+    # from (optional): The sender's phone number (Note: this needs to be an authorized number in your Sinch account)
+    # message: SMS Body
+    params = { phone_number: '+121255555555', from: '+121255535555', message: 'I have a very specific set of skills.' }
+    gateway.request(:send_sms, params) 
 
 ## Stubbing Requests ##
 
@@ -65,6 +79,7 @@ Below is a sample Rails initializer that will use the BogusGateway if the secret
       config.gateway = Sinch::BogusGateway
       if secrets.present?
         config.application_key = secrets[:application_key]
+        config.secret_key = '[your-application-secret]'
         config.gateway = Sinch::Gateway
       end
     end

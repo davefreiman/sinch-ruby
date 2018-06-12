@@ -1,7 +1,6 @@
 module Sinch
   module Request
     module Authorization
-
       private
 
         def authorization
