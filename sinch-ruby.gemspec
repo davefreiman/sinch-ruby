@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'sinch-ruby'
-  s.version     = '0.2.0'
+  s.version     = '0.2.1'
   s.date        = '2018-02-14'
   s.summary     = 'Sinch REST Api Wrapper'
   s.description = 'A library for communicating with the Sinch Rest API'

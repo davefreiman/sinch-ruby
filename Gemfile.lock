@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sinch-ruby (0.2.0)
+    sinch-ruby (0.2.1)
       httparty (~> 0.15.6)
 
 GEM

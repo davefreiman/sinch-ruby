@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'sinch/builder/request/send_sms'
 
 module Sinch
   module Builder
