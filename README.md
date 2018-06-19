@@ -14,7 +14,7 @@ Currently the only implementation covers the [Verification API](https://www.sinc
 
 This gem is designed to work with rails. To install it, add the following to your Gemfile
 
-    gem 'sinch-ruby', '0.1.3', require: 'sinch'
+    gem 'sinch-ruby', '0.2.2', require: 'sinch'
     
 To install it via `gem install`:
 
